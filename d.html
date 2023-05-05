@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <di id="text"></div>
+    <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        const text = document.getElementById("text");
+        const messages =["Hello","Hi","Hey","Hola"];
+        let index =0;
+
+        setInterval(()=>{
+            text.textContent = messages[index];
+            index =(index + 1)% messages.length;
+        },2000);// change message every 2 seconds
+
+    </script>
+    <style>
+         h1 {
+            color: blue;
+        }
+        div {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>TRY EXAMPLES</h1>
+</body>
+</html>

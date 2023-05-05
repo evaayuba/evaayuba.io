@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Style3.css'>
+</head>
+<body  class="index" background="c.jpeg">
+    <header>
+        <h1>HOME PAGE</h1>
+        <nav>
+            <ul>
+               <li><SPan class="navigation"><a href="About me.html">Personal Details</span></li>
+                <li><span class="navigation"><a href="Contact.html">Map</a></span></li>
+                <li><span class="navigation"><a href="Map.html">Contact Form</a></span></li>
+                <li><span class="navigation"><a href="Eva.html">Previous page</a></span></li>
+                <li><span class="navigation"><a href="Login.html">Login form</a></span></li>
+                 </ul>
+                </nav>
+                <html>
+                    <body>
+
+                        <div style="text-align: center;">
+                            <button onclick="play/pause()">play/pause</button>
+                            <button onclick="makeBig()">Big</button>
+                            <button onclick="makeSmall()">Small</button>
+                            <button onclick="makeNormal()">Normal</button>
+                            <br>
+                            <br>
+                            <video id="video1" width="420">
+                    <source src="video1.mp4" type="video/mp4">
+                    <source src="video1.html" type="video/html">
+                    your browser does not support HTML5 video.
+                </video>
+                </div>
+                <script> 
+
+                    var myVideo = document.getElementById("video1");
+
+                    function playpause() {
+                        if (myVideo.paused)
+                        myVideo.play();
+                        else
+                        myVideo.pause();
+                    }
+
+                    function makeBig() {
+                        myVideo.width = 560;
+                    }
+
+                    function makeSmall() {
+                        myVideo.width = 320;
+                    }
+
+                    function makeNormal() {
+                        myVideo.width = 420;
+                    }
+                </script>
+            </header>
+        </body>
+        </html>

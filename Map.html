@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Map</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Style3.css'>
+</head>
+<body style="background-color: darkseagreen;">
+    <h1>CONTACT FORM</h1>
+    <div id="Map of my place">
+    <form id="Eva">
+        <label>Name: </label>
+        <input type="text"  id="name" name="name">
+        <br>
+        <br>
+        <label>Address:</label>
+        <input type="text" id="adress" name="adress">
+        <br>
+        <br>
+        <label>Email: </label>
+        <input type="email"  id="email" name="email">
+        <br>
+        <br>
+        <label>Comments: </label>
+        <textarea name="comments" id="comments" cols="10" rows="5"></textarea>
+        <br>
+        <br>
+         
+        <button id="submit">Submit</button>
+
+        <a href="Contact.html">Contact me</a>
+        <a href="Login.html">Go to:Login form</a>
+    </div>
+    </form>
+</body>
+    <script>
+        let Eva=document.querySelector("#Eva");
+        Eva.addEventListener("submit", function(){
+            let name = document.querySelector("#name").value;
+            let adress = document.querySelector("#adress").value;
+            let email = document.querySelector("#email").value;
+            let comments = document.querySelector("#comments").value;
+            //create oblect
+            let detail = {
+                name: name,
+                adress: adress,
+                email: email,
+                comments: comments
+            };
+            //insert into localstorage
+            let details = JSON.parse(localStorage.getItem("details")) || [];
+            //push into localstorge
+
+            details.push(detail);
+            //set and save data into localstorage
+
+            localStorage.setItem("details",JSON.stringify(details));
+
+            alert("Successfull");
+            
+            Eva.reset();
+
+        })
+    </script>
+
+</html>
